@@ -1,0 +1,45 @@
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.factorypath
+.settings/
+.sts4-cache/
+.apt_generated/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# Spring
+.springBeans
+.spring-boot-devtools.properties
+
+# Fichiers système / temporaires
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Fichiers d'environnement
+.env
+.env.*
+
+# Frontend JS/Angular (si tu ajoutes plus tard)
+node_modules/
+dist/

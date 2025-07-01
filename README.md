@@ -16,7 +16,19 @@ mvn spring-boot:run
 
 
 accéder en local 
-http://127.0.0.1:8080/
+    http://127.0.0.1:8080/
 
 accéder en lan
-http://192.168.1.151:8080/
+    http://192.168.1.151:8080/
+
+accéder depuis l'extérieur
+IP box internet => 88.167.247.17
+Faire du NAT / redirection de port sur la Freebox
+    http://88.167.247.17:8080/
+
+## Pour committer
+mvn clean            # Nettoyer ton build local
+git status           # Vérifier les fichiers à committer
+git add .
+git commit -m "Nettoyage + modifications"
+git push
