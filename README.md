@@ -1,5 +1,10 @@
 # WebAppLearn
 
+## Version de java
+java -version       17.0.16
+mvn -v              3.8.7
+
+
 ## Commande pour lancer le projet
 
 cd webapplearn
