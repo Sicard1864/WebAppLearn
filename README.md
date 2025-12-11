@@ -34,7 +34,7 @@ Faire du NAT / redirection de port sur la Freebox
 
 ## Pour test le CRUD
 
-curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d "{ \"name\": \"Arthur\", \"email\": \"arthur@example.com\", \"password\": \"test123\", \"bio\": \"Hello world\" }"
+http://localhost:8080/swagger-ui/index.html#/
 
 
 ## Pour ouvrir PostgreSQL
@@ -52,3 +52,16 @@ git status           # Vérifier les fichiers à committer
 git add .
 git commit -m "Nettoyage + modifications"
 git push
+
+
+
+# Journal
+
+## Historique
+
+11/12/25 - Création de l'authentification
+10/12/25 - Création du modèle User (dto, class, service, controller, repository)
+
+## Prévus
+
+token jwt et front authentification
