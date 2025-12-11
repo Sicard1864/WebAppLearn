@@ -31,6 +31,21 @@ IP box internet => 88.167.247.17
 Faire du NAT / redirection de port sur la Freebox
     http://88.167.247.17:8080/
 
+
+## Pour test le CRUD
+
+curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d "{ \"name\": \"Arthur\", \"email\": \"arthur@example.com\", \"password\": \"test123\", \"bio\": \"Hello world\" }"
+
+
+## Pour ouvrir PostgreSQL
+
+psql -U postgres -d webapplearn     # code : c+
+\dt                                 # voir les tables
+\d <table>                          # voir structure de la table
+SELECT * FROM users;                # voir le contenu
+<autre requête SQL>
+\q                                  # quitter psql
+
 ## Pour committer
 mvn clean            # Nettoyer ton build local
 git status           # Vérifier les fichiers à committer
