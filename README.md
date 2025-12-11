@@ -65,3 +65,4 @@ git push
 ## Prévus
 
 token jwt et front authentification
+installer postgreSQL sur debian

@@ -5,7 +5,7 @@ public record AuthResponse(
     String name,
     String email,
     String bio,
-    String message
+    String token
 ) {
     
 }
