@@ -5,9 +5,9 @@ java -version       17.0.16
 mvn -v              3.8.7
 
 
-## Commande pour lancer le projet
+## Commande pour lancer le projet back
 
-cd webapplearn
+cd webapplearn/back
 mvn spring-boot:run
 
 | Commande              | À quoi ça sert                         | Quand l'utiliser                         |
@@ -59,10 +59,86 @@ git push
 
 ## Historique
 
-11/12/25 - Création de l'authentification
+11/12/25 - Création de l'authentification + token jwt
 10/12/25 - Création du modèle User (dto, class, service, controller, repository)
 
 ## Prévus
 
-token jwt et front authentification
 installer postgreSQL sur debian
+réorganiser répo
+installation angular sur windows et debian
+front 
+    1. Configurer l’URL du backend
+    2. AppModule : activer HttpClient + formulaires + routing
+    3. Routing : login, register, home
+    4. AuthService : liaison avec ton backend Spring
+    5. Interceptor : ajouter le header Authorization automatiquement
+    6. Composant Register
+    7. Composant Login
+    8. Page d’accueil (Home) de l’application
+    9. AppComponent : juste le router
+    10. Tester
+mettre plusieur langue
+mettre dark, light mode
+regarder d'autre site (Road Royal, scribhub, scan, donation, amazone, présnetation)
+
+
+## réorga
+
+WebAppLearn/
+├─ backend/
+│  ├─ pom.xml
+│  ├─ src/
+│  │  ├─ main/
+│  │  │  ├─ java/
+│  │  │  │   └─ fr/sicard/webapplearn/
+│  │  │  │       ├─ WebapplearnApplication.java
+│  │  │  │       ├─ config/                   (si plus tard)
+│  │  │  │       │   ├─ WebConfig.java        (CORS, Jackson, locales…)
+│  │  │  │       │   └─ OpenApiConfig.java    (OpenAPI)
+│  │  │  │       ├─ security/
+│  │  │  │       ├─ auth/
+│  │  │  │       │   ├─ AuthController.java         (controller/)
+│  │  │  │       │   ├─ AuthService.java            (service/)
+│  │  │  │       │   └─ dto/
+│  │  │  │       ├─ user/
+│  │  │  │       │   ├─ User.java                   (domain/)
+│  │  │  │       │   ├─ UserService.java            (service/)
+│  │  │  │       │   ├─ UserRepository.java         (persistence/)
+│  │  │  │       │   ├─ UserController.java         (web/)
+│  │  │  │       │   └─ dto/
+│  │  │  │       │
+│  │  │  │       ├─ autre model/
+│  │  │  │       │
+│  │  │  │       └─ common/                   (à faire plus tard)
+│  │  │  │           ├─ exception/                          
+│  │  │  │           │   ├─ ApiException.java
+│  │  │  │           │   ├─ NotFoundException.java
+│  │  │  │           │   ├─ BadRequestException.java
+│  │  │  │           │   ├─ GlobalExceptionHandler.java
+│  │  │  │           └─ util/
+│  │  │  │               ├─ DateUtils.java
+│  │  │  │               ├─ StringUtils.java
+│  │  │  └─ resources/
+│  │  │      ├─ application.yml
+│  │  │      ├─ application-dev.yml
+│  │  │      ├─ application-test.yml
+│  │  │      └─ static/                       (si besoin)
+│  │  │          ├─ index.html
+│  │  │          └─ style.css    
+│  │  └─ test/
+│  │      └─ java/…
+│  └─ README.md (facultatif, spécifique backend)
+│
+├─ frontend/        (à créer plus tard pour ton Angular)
+│
+├─ docs/
+│  ├─ architecture.md   (explication back, front)
+│  └─ api.md            (endpoints importants, règles d’auth, etc.)
+├─ .github/
+│  └─ workflows/
+│      ├─ ci-backend.yml
+│      └─ ci-frontend.yml (plus tard)
+├─ .gitignore
+├─ README.md        (global projet)
+└─ LICENSE          (si public)
